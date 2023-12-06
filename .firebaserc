@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cc105a-c3d8e": {
+      "hosting": {
+        "Finals": [
+          "cc105a-c3d8e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cc105a-c3d8e"
+  }
+}
