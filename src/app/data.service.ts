@@ -23,6 +23,8 @@ export class DataService{
   //     'out of stock',
   //  )
 
+  //likeState: boolean = false;
+  
   getData(){
     return this.listofData;
   }
@@ -34,10 +36,12 @@ export class DataService{
     this.listofData.push(data);
     this.saveData();
   }
-  updateData(index: number, data: Data){
+  updateData(index: number, data:Data){ 
     this.listofData[index]=data;
     this.saveData();
   }
+  
+    
   getSpecData(index:number){
     return this.listofData[index];
 
@@ -45,6 +49,7 @@ export class DataService{
   likeData(index: number): void {
     this.listofData[index].likes++;
   }
+  
   addComment(index: number, comment: string): void {
     if(this.listofData[index] && this.listofData[index].comments){
     this.listofData[index].comments.push(comment);

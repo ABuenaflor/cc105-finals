@@ -1,7 +1,7 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
-    <div class="col-12">
-      <table class="table table-bordered">
+    <div class="col-10">
+      <table class="table ">
         <thead>
           <tr>
             <th>Index</th>
@@ -13,10 +13,10 @@
             <th scope="col">Actions</th>
           </tr>
           <tr>
-            <td>{{data?.id}}</td>
-            <td>{{data?.brand}}</td>
-            <td>{{data?.model}}</td>
-            <td><img src="{{data?.imagePath}}"></td>
+            <td class="cell">{{data?.id}}</td>
+            <td class="cell">{{data?.brand}}</td>
+            <td class="cell">{{data?.model}}</td>
+            <td class="cell"><img src="{{data?.imagePath}}"></td>
             <td *ngIf="data?.status=='out of stock'" class="p-3 mb-2 bg-danger text-white">{{data?.status}}</td>
             <td *ngIf="data?.status=='soon'" class="p-3 mb-2 bg-success text-white">{{data?.status}}</td>
             <td *ngIf="data?.status=='available'" class="p-3 mb-2 bg-primary text-whites">{{data?.status}}</td>
@@ -42,4 +42,88 @@
 </div><br>
 <div *ngFor="let comment of data?.comments">
   <p>{{ comment }}</p>
+</div> -->
+
+                  <!-- working code -->
+<!-- <style>
+  td.wider-cell {
+      width: 500px; /* Adjust the width as needed */
+    }
+    table {
+      margin: 0 auto;
+      margin-left: 20px; /* Adjust the left margin as needed */
+      border-collapse: collapse;
+      width: 80%; /* Adjust the width as needed */
+    }
+</style>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Image</th>
+      <th scope="col">Status</th>
+      <th scope="col">Like</th>
+      <th scope="col" class="wider-cell">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th scope="row">{{data?.id}}</th>
+      <td>{{data?.brand}}</td>
+      <td>{{data?.model}}</td>
+      <td><img src="{{data?.imagePath}}" width="300" height="250"></td>
+      <td *ngIf="data?.status=='out of stock'" class="p-3 mb-2 bg-danger text-white">{{data?.status}}</td>
+      <td *ngIf="data?.status=='soon'" class="p-3 mb-2 bg-success text-white">{{data?.status}}</td>
+      <td *ngIf="data?.status=='available'" class="p-3 mb-2 bg-primary text-whites">{{data?.status}}</td>
+      <td>{{data?.likes}}</td>
+
+      <td class="wider-cell">
+        <button type="button" class="btn btn-primary"  (click)="editButton()"><i class="far fa-eye"></i>Edit</button>
+       <button type="button" class="btn btn-danger" (click)="deleteButton()"><i class="far fa-trash-alt" ></i>Delete</button>
+       <button type="button" class="btn btn-success" (click)="likeButton()">Like</button>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<div class="comment-section">
+  <input type="text" [(ngModel)]="newComment" placeholder="Add a comment">
+  <button type="button" class="btn btn-info" (click)="addComment()">Add Comment</button>
+</div><br>
+<div *ngFor="let comment of data?.comments">
+  <p>{{ comment }}</p>
+</div> -->
+<div class="container">
+<div class="center-container">
+  <div class="content-container">
+<div class="post-container">
+  <div class="post-header">
+    <p>Index: {{data?.id}}</p>
+    <p>Brand: {{data?.brand}}</p>
+    <p>Model: {{data?.model}}</p>
+  </div>
+  <div class="post-image">
+    <img src="{{data?.imagePath}}" alt="Post Image">
+  </div>
+  <div class="post-actions">
+    <mat-icon (click)="likeButton()">favorite</mat-icon><small>{{data?.likes}}</small>
+    <button type="button" class="btn btn-primary"  (click)="editButton()">Edit</button>
+    <button type="button" class="btn btn-danger" (click)="deleteButton()">Delete</button>
+    <!-- <button type="button" class="btn btn-success" (click)="likeButton()">Like</button> -->
+  </div>
+</div>
+<div class="post-comments">
+  <input type="text" [(ngModel)]="newComment" placeholder="Add a comment">
+  <button type="button" class="btn btn-info" (click)="addComment()">Add Comment</button>
+  <div *ngFor="let comment of data?.comments">
+    <p>{{ comment }}</p>
+  </div>
+</div>
+</div>
+</div>
 </div>

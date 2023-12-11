@@ -24,6 +24,7 @@ export class DatatableComponent {
       this.listofData=data;
     })
   }
+  
   logout(){
     this.isLogout.emit()
   }

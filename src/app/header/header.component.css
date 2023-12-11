@@ -1,0 +1,6 @@
+.navbar-nav {
+  margin-right: 1100px;
+}
+.navbar-nav li {
+  margin-right: 30px; /* Adjust this value to increase or decrease the space between the buttons */
+}

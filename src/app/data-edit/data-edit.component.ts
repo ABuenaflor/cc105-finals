@@ -50,14 +50,14 @@ export class DataEditComponent {
     const model=this.form.value.model;
     const imagePath=this.form.value.imagePath;
     const status=this.form.value.status;
-    const likes=0;
+    const likes=0; //this.form.value.like
     
     
     let comments: string[] = [];
     if (this.editmode) {
       comments = this.dataService.getSpecData(this.index).comments;
+      
     }
-
     const data: Data= new Data(id,brand,model,imagePath,status,likes,comments);
     if(this.editmode==true){
      this.dataService.updateData(this.index, data);

@@ -24,9 +24,42 @@
       <option value="available">Available</option>
       <option value="out of stock">Out of Stock</option>
     </select>
-   <!-- <textarea type="text" class="form-control" placeholder="status" formControlName="status"></textarea> -->
+            <!-- //<textarea type="text" class="form-control" placeholder="status" formControlName="status"></textarea>  -->
   </div>
 
   <button class="btn-btn-primary font-weight-bold" type="submit" [disabled]="form.invalid">Save</button>
   <button type="reset" class="btn-btn-danger font-weight-bold">Clear</button>
 </form>
+
+
+<!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" placeholder="brand" formControlName="brand">
+  <label for="floatingInput">Brand</label>
+</div>
+
+<div class="form-floating">
+  <input type="text" class="form-control" placeholder="model" formControlName="model">
+  <label for="floatingPassword">Model</label>
+</div>
+<br>
+<div class="form-floating">
+  <input type="text" class="form-control" placeholder="image path" formControlName="imagePath">
+  <label for="floatingPassword">Image Path</label>
+  <img src="{{form.value.imgPath}}" alt="" class="img-responsive"/>
+</div>
+
+<div class="form-group">
+<label >Status: </label>
+  <select formControlName="status" name="status" id="status">
+    <option value="available">Available</option>
+    <option value="out of stock">Out of Stock</option>
+  </select>
+</div>
+
+<br>
+
+<button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+<button type="reset" class="btn btn-danger">Clear</button>
+</form> -->

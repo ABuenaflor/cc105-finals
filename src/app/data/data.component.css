@@ -1,0 +1,82 @@
+body{
+  background-color: black;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
+  width: 800px; /* Adjust this value to change the width of the image */
+  height: 500px; /* Adjust this value to change the height of the image */
+  object-fit: cover; /* This will ensure that your image covers the whole area without distorting the aspect ratio */
+}
+.center-container {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+  /* align-items: center; */
+  /* height: 100vh; This will make the container take up the full height of the viewport */
+}
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* This will align the top of the post-container and post-comments */
+  border: 10px black;
+}
+.post-container {
+  margin-right: 50px;
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+}
+.post-comments{
+  margin-right: 50px;
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-left: 30px;
+}
+
+.post-header {
+  display: table-row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.post-header p{
+  font-weight: bold;
+  font-size: large;
+}
+
+.post-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.icon-padding{
+  padding-right: 20px;
+}
+.post-actions button {
+  margin-right: 10px; /* This will add some space between the buttons */
+}
+
+.post-comments {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}

@@ -12,8 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AngularFireModule } from '@angular/fire/compat';
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -38,7 +40,8 @@ import { AngularFireModule } from '@angular/fire/compat';
       storageBucket: "angular-auth-2c467.appspot.com",
       messagingSenderId: "260805271056",
       appId: "1:260805271056:web:54eb4655fe478a930c7495"
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
