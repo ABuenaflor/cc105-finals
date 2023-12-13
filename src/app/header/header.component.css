@@ -1,6 +1,11 @@
+
+.nav-container{
+  padding-left: 20px;
+  
+}
 .navbar-nav {
-  margin-right: 1100px;
+  margin-right: 900px;
 }
 .navbar-nav li {
-  margin-right: 30px; /* Adjust this value to increase or decrease the space between the buttons */
+  margin-right: 10px; /* Adjust this value to increase or decrease the space between the buttons */
 }

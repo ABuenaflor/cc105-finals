@@ -118,11 +118,24 @@
   </div>
 </div>
 <div class="post-comments">
-  <input type="text" [(ngModel)]="newComment" placeholder="Add a comment">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Enter Comment here..." [(ngModel)]="newComment"></textarea>
+    </mat-form-field>
+    <button  type="button" mat-button color="primary" (click)="addComment()">Add Comment</button>
+    
+
+  <div *ngFor="let comment of data?.comments; let i = index" >
+    <p>{{ comment }}</p>
+    <button  type="button" mat-button color="warn" (click)="deleteComment(i)">Delete Comment</button>
+  </div>
+  <!-- <input type="text" [(ngModel)]="newComment" placeholder="Add a comment">
   <button type="button" class="btn btn-info" (click)="addComment()">Add Comment</button>
   <div *ngFor="let comment of data?.comments">
     <p>{{ comment }}</p>
-  </div>
+  </div> -->
+
 </div>
 </div>
 </div>

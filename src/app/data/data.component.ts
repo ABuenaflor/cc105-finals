@@ -37,5 +37,12 @@ constructor(private dataService:DataService, private router:Router,private backE
    this.data?.comments.push(this.newComment);
   }
 }
+deleteComment(index: number) {
+  if(this.data && this.data.comments){
+    this.data.comments.splice(index, 1);
+    this.dataService.saveData();
+    this.backEndService.saveData();
+  }
+}
 }
 

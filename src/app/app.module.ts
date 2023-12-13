@@ -15,6 +15,11 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import { ProfileComponent } from './profile/profile.component';
+
 
 
 @NgModule({
@@ -24,11 +29,15 @@ import {MatIconModule} from '@angular/material/icon';
     DataComponent,
     DataEditComponent,
     DatatableComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatInputModule,
     MatIconModule,
+    MatFormFieldModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

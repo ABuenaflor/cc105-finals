@@ -80,3 +80,22 @@ body{
   border-top: 1px solid #ccc;
   padding-top: 20px;
 }
+.profile{
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-left: 30px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color: white;
+}
+
+.example-full-width {
+  width: 100%;
+}
